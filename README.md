@@ -1,51 +1,54 @@
-# Satellite Pass Prediction System
+#  Satellite Pass Prediction
 
 ## About Project
-This project is about tracking satellites and finding when they pass over a location.
+This project is used to predict when a satellite will pass over a particular location.
 
-I fetch satellite data from Celestrak website. Then I use SGP4 algorithm to calculate where the satellite will be in future. After that, I check when the satellite comes close to a location (pass detection).
-
-Finally, I store this data in a database and show it using an API.
+It uses TLE (Two-Line Element) data to calculate satellite position and check visibility.
 
 ---
 
-## Features
+##  What it does
 - Fetch satellite data (TLE)
 - Calculate satellite position
-- Detect passes
-- Store data in database
-- Show data using API
+- Detect when satellite is visible
+- Store pass details like start time, end time and duration
 
 ---
 
-## Technologies Used
+##  Technologies Used
 - Python
-- SGP4
-- SQLite
-- FastAPI
+- Basic orbital calculation logic
+- Database (SQLite)
 
 ---
 
-## How to Run
+##  Project Files
+- fetch.py → gets satellite data  
+- propagator.py → calculates position  
+- pass_predictor.py → checks passes  
+- database.py → stores data  
+- main.py → runs the project  
 
-1. Install required libraries:
-pip install sgp4 requests fastapi uvicorn
+---
 
-2. Run main file:
+##  How to run
+1. Clone the project
+git clone https://github.com/pritibha-vishwakarma/satellite-pass-predicition
+
+2. Go to folder
+cd satellite-pass-predicition
+
+3. Run file
 python main.py
 
-3. Run API:
-uvicorn api:app --reload
+---
 
-4. Open in browser:
-http://127.0.0.1:8000/passes
+##  Use
+- Satellite tracking  
+- Communication planning  
+- Learning purpose  
 
 ---
 
-## Output
-The API shows satellite name, start time, and end time of pass.
-
----
-
-## Note
-This is a basic implementation. Logic can be improved for more accurate results.
+##  Author
+Pritibha Vishwakarma
