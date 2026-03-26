@@ -26,7 +26,7 @@ def fetch():
     return satellites
 
 
-# TEST CODE (IMPORTANT)
+# TEST
 if __name__ == "__main__":
     data = fetch()
     print("Total satellites:", len(data))
