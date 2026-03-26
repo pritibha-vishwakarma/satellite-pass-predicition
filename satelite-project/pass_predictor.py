@@ -1,7 +1,7 @@
 def is_visible(position):
     x, y, z = position
 
-    # Simple distance logic (learning purpose)
+    # Simple distance logic 
     distance = abs(x) + abs(y) + abs(z)
 
     if distance < 7000:
